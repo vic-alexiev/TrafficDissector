@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{60A667F2-8602-474B-BFED-418A9BB6FD09}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrafficDissector</RootNamespace>
+    <AssemblyName>TrafficDissector</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SharpPcap, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DnsTable.cs" />
+    <Compile Include="PortScanning\ScanMessage.cs" />
+    <Compile Include="PortScanning\SynConnectCall.cs" />
+    <Compile Include="PortScanning\TcpConnectCall.cs" />
+    <Compile Include="PortScanning\UdpConnectCall.cs" />
+    <Compile Include="UI\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ChooseDeviceUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ChooseDeviceUserControl.Designer.cs">
+      <DependentUpon>ChooseDeviceUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DnsMXForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DnsMXForm.Designer.cs">
+      <DependentUpon>DnsMXForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InjectIPv4PacketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InjectIPv4PacketForm.Designer.cs">
+      <DependentUpon>InjectIPv4PacketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InjectPacketsFromFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InjectPacketsFromFileForm.Designer.cs">
+      <DependentUpon>InjectPacketsFromFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InjectEthernetPacketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InjectEthernetPacketForm.Designer.cs">
+      <DependentUpon>InjectEthernetPacketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InjectTcpPacketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InjectTcpPacketForm.Designer.cs">
+      <DependentUpon>InjectTcpPacketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InjectUdpPacketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InjectUdpPacketForm.Designer.cs">
+      <DependentUpon>InjectUdpPacketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PacketHeadersUserControls\BaseHeaderUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PacketHeadersUserControls\BaseHeaderUserControl.Designer.cs">
+      <DependentUpon>BaseHeaderUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PacketHeadersUserControls\EthernetHeaderUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PacketHeadersUserControls\EthernetHeaderUserControl.Designer.cs">
+      <DependentUpon>EthernetHeaderUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PacketHeadersUserControls\IPv4HeaderUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PacketHeadersUserControls\IPv4HeaderUserControl.Designer.cs">
+      <DependentUpon>IPv4HeaderUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PacketHeadersUserControls\TcpHeaderUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PacketHeadersUserControls\TcpHeaderUserControl.Designer.cs">
+      <DependentUpon>TcpHeaderUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PacketHeadersUserControls\UdpHeaderUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PacketHeadersUserControls\UdpHeaderUserControl.Designer.cs">
+      <DependentUpon>UdpHeaderUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PingForm.Designer.cs">
+      <DependentUpon>PingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PortScannerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PortScannerForm.Designer.cs">
+      <DependentUpon>PortScannerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RemoteCommandLineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RemoteCommandLineForm.Designer.cs">
+      <DependentUpon>RemoteCommandLineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DetailedSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DetailedSummaryForm.Designer.cs">
+      <DependentUpon>DetailedSummaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SummaryForm.Designer.cs">
+      <DependentUpon>SummaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WhoIsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WhoIsForm.Designer.cs">
+      <DependentUpon>WhoIsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WqlQueryAnalyzerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WqlQueryAnalyzerForm.Designer.cs">
+      <DependentUpon>WqlQueryAnalyzerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visualization\DataGridViewVisualizer.cs" />
+    <Compile Include="Visualization\ListViewVisualizer.cs" />
+    <Compile Include="Visualization\StatusStripVisualizer.cs" />
+    <Compile Include="Visualization\TreeViewVisualizer.cs" />
+    <Compile Include="UI\ChooseDeviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ChooseDeviceForm.Designer.cs">
+      <DependentUpon>ChooseDeviceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UI\BaseForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ChooseDeviceForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChooseDeviceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ChooseDeviceUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChooseDeviceUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DnsMXForm.resx">
+      <DependentUpon>DnsMXForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InjectIPv4PacketForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InjectIPv4PacketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InjectPacketsFromFileForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InjectPacketsFromFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InjectEthernetPacketForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InjectEthernetPacketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InjectTcpPacketForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InjectTcpPacketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InjectUdpPacketForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InjectUdpPacketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PacketHeadersUserControls\EthernetHeaderUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EthernetHeaderUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PacketHeadersUserControls\IPv4HeaderUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IPv4HeaderUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PacketHeadersUserControls\TcpHeaderUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TcpHeaderUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PacketHeadersUserControls\UdpHeaderUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UdpHeaderUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PingForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PortScannerForm.resx">
+      <DependentUpon>PortScannerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RemoteCommandLineForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RemoteCommandLineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DetailedSummaryForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DetailedSummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SummaryForm.resx">
+      <DependentUpon>SummaryForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WhoIsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WhoIsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WqlQueryAnalyzerForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WqlQueryAnalyzerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NetworkConnection.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alien.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Assassin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Binoculars.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Danger.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlackEye.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eye.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Glasses.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlackHat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JediKnight.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MagnifyingGlass.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToFirstPacket.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToLastPacket.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

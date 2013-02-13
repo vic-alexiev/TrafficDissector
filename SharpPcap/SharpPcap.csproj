@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24262E52-1304-4A25-8F73-A3B06E40592E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>SharpPcap</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SharpPcap</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\TrafficDissector\bin\Debug\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>3</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SharpPcap</RootNamespace>
+    <GenerateDocumentation>true</GenerateDocumentation>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>docs\Api\SharpPcap.xml</DocumentationFile>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SharpPcap</RootNamespace>
+    <GenerateDocumentation>true</GenerateDocumentation>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="Packets\package.html" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\ARPFields.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\ARPPacket.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\DataStructures.cs" />
+    <Compile Include="Packets\EthernetFields.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\EthernetPacket.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\ICMPFields.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\ICMPMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\ICMPMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\ICMPPacket.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\IGMPFields.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\IGMPMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\IGMPMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\IGMPPacket.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\IPv4Fields.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\IPPacket.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\IPPorts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\IPProtocol.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\LinkLayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\LinkLayers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\Packet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\PacketEncoding.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\PacketFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\TCPFields.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\TCPPacket.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\UDPFields.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\UDPPacket.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\Util\AnsiEscapeSequences.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\Util\ArrayHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\Util\HexHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packets\Util\Timeval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PcapDevice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PcapEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PcapException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PcapHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PcapOfflineDevice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PcapSendQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PcapStatisticsModePacket.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Protocols\ARP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Pcap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\Convert.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\Int64Range.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\IPAddressRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\IPSubnet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\IPUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\NumberRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\Random.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Version.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PcapUnmanagedStructures.cs" />
+    <Compile Include="Packets\IPv4Packet.cs" />
+    <Compile Include="Packets\IPv6Packet.cs" />
+    <Compile Include="Packets\IPv6Fields.cs" />
+    <Compile Include="Packets\Util\ChecksumUtils.cs" />
+    <Compile Include="SafeNativeMethods.cs" />
+    <Compile Include="PcapDeviceCaptureLoop.cs" />
+    <Compile Include="PcapAddress.cs" />
+    <Compile Include="Sockaddr.cs" />
+    <Compile Include="PcapDeviceList.cs" />
+    <Compile Include="PcapInterface.cs" />
+    <Compile Include="Packets\EthernetPacketType.cs" />
+    <Compile Include="Packets\RawPacket.cs" />
+    <Compile Include="PcapDeviceNotReadyException.cs" />
+    <Compile Include="PcapStatistics.cs" />
+    <Compile Include="PcapStatisticsException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+    <ProjectGuid>{24262E52-1304-4A25-8F73-A3B06E40592E}</ProjectGuid>
+    <RootNamespace>SharpPcap</RootNamespace>
+  </PropertyGroup>
+</Project>
